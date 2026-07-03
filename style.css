@@ -1,0 +1,1531 @@
+/*======================================================
+    WACP 2026 KEYNOTE WEBSITE
+    Guest Speaker: Engr. Abraham Wright Enoh
+    style.css
+======================================================*/
+
+/*==========================
+    GOOGLE FONTS
+===========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+/*==========================
+    CSS VARIABLES
+===========================*/
+
+:root{
+
+    --primary:#005EB8;
+    --secondary:#009B77;
+    --navy:#12344D;
+    --white:#FFFFFF;
+    --light:#F4F7FA;
+    --orange:#FF8A00;
+
+    --text:#2F3A45;
+    --text-light:#6C7A89;
+
+    --shadow:0 10px 35px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}
+
+/*==========================
+    RESET
+===========================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Source Sans 3',sans-serif;
+
+    background:var(--light);
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1250px;
+
+    margin:auto;
+
+}
+
+/*==========================
+    SECTION
+===========================*/
+
+.section{
+
+    padding:100px 0;
+
+}
+
+.light{
+
+    background:#ffffff;
+
+}
+
+.section-title{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:2.6rem;
+
+    text-align:center;
+
+    color:var(--navy);
+
+    margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+    max-width:760px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    font-size:1.1rem;
+
+}
+
+/*==========================
+    BUTTONS
+===========================*/
+
+.btn,
+.btn-outline,
+.tool-btn,
+.btn-download{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 32px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.btn:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.btn-download{
+
+    margin-top:20px;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+}
+
+/*==========================
+    HEADER
+===========================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    background:#ffffffee;
+
+    backdrop-filter:blur(12px);
+
+    z-index:999;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.05);
+
+}
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:85px;
+
+}
+
+.logo{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1.5rem;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav ul li a{
+
+    color:var(--navy);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:var(--secondary);
+
+}
+
+/*==========================
+    HERO
+===========================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#005EB8,#009B77);
+
+    color:#fff;
+
+    padding-top:120px;
+
+}
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    background:#ffffff22;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:3.4rem;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.hero h2{
+
+    font-size:1.7rem;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+.hero p{
+
+    font-size:1.1rem;
+
+    margin-bottom:35px;
+
+    max-width:600px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image img{
+
+    border-radius:24px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+}
+
+/*======================================================
+    SPEAKER SECTION
+======================================================*/
+
+.speaker-grid{
+
+    display:grid;
+
+    grid-template-columns:350px 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.speaker-photo img{
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.speaker-content h2{
+
+    font-family:'Montserrat',sans-serif;
+
+    color:var(--navy);
+
+    font-size:2.3rem;
+
+    margin-bottom:10px;
+
+}
+
+.speaker-content h3{
+
+    color:var(--secondary);
+
+    font-size:1.2rem;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+.speaker-content p{
+
+    color:var(--text-light);
+
+    margin-bottom:35px;
+
+}
+
+.speaker-highlights{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.speaker-highlights div{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.speaker-highlights div:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.speaker-highlights h4{
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.speaker-highlights p{
+
+    margin:0;
+
+    font-weight:600;
+
+}
+
+/*======================================================
+    OBJECTIVES
+======================================================*/
+
+.objective-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.objective-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.objective-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.objective-card i{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.objective-card h3{
+
+    color:var(--navy);
+
+    margin-bottom:15px;
+
+}
+
+/*======================================================
+    INFORMATION CARDS
+======================================================*/
+
+.cards-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.info-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.info-card i{
+
+    font-size:2.8rem;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.info-card h3{
+
+    margin-bottom:15px;
+
+    color:var(--navy);
+
+}
+
+/*======================================================
+    EMERGING THREATS
+======================================================*/
+
+.threat-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.threat-card{
+
+    background:#fff;
+
+    border-left:6px solid var(--orange);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.threat-card:hover{
+
+    border-left-color:var(--secondary);
+
+    transform:translateY(-10px);
+
+}
+
+.threat-card i{
+
+    font-size:2.6rem;
+
+    color:var(--orange);
+
+    margin-bottom:18px;
+
+}
+
+.threat-card h3{
+
+    color:var(--navy);
+
+    margin-bottom:15px;
+
+}
+
+/*======================================================
+    AI vs TRADITIONAL
+======================================================*/
+
+.comparison-table{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:35px;
+
+}
+
+.comparison-column{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.traditional{
+
+    border-top:6px solid var(--orange);
+
+}
+
+.ai-powered{
+
+    border-top:6px solid var(--secondary);
+
+}
+
+.comparison-column h3{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:var(--navy);
+
+}
+
+.comparison-column ul li{
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+/*======================================================
+    WORKFLOW
+======================================================*/
+
+.workflow{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.workflow-step{
+
+    width:180px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.workflow-step:hover{
+
+    transform:scale(1.05);
+
+}
+
+.workflow-step i{
+
+    font-size:2.8rem;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.arrow{
+
+    font-size:2rem;
+
+    color:var(--secondary);
+
+}
+
+/*======================================================
+    DIGITAL HEALTH ECOSYSTEM
+======================================================*/
+
+.ecosystem-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.eco-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.eco-card:hover{
+
+    transform:translateY(-8px);
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.eco-card:hover i{
+
+    color:#fff;
+
+}
+
+.eco-card i{
+
+    font-size:3rem;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+/*======================================================
+    TIMELINE
+======================================================*/
+
+.timeline{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.timeline-item{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.timeline-item:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.timeline-item span{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    margin-bottom:18px;
+
+    font-size:.9rem;
+
+}
+
+.timeline-item h3{
+
+    color:var(--navy);
+
+    margin-bottom:15px;
+
+}
+
+/*======================================================
+    UNIVERSAL CARD ANIMATION
+======================================================*/
+
+.objective-card,
+.info-card,
+.threat-card,
+.eco-card,
+.workflow-step,
+.timeline-item,
+.speaker-highlights div{
+
+    cursor:pointer;
+
+}
+
+.objective-card:hover,
+.info-card:hover,
+.threat-card:hover,
+.eco-card:hover,
+.timeline-item:hover{
+
+    box-shadow:0 20px 50px rgba(0,94,184,.18);
+
+}
+/*======================================================
+    AI TOOLS SECTION
+======================================================*/
+
+.tools-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.tool-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.tool-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+
+}
+
+.tool-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(0,94,184,.20);
+
+}
+
+.tool-card img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin:20px auto;
+
+}
+
+.tool-card h3{
+
+    color:var(--navy);
+
+    margin-bottom:15px;
+
+}
+
+.tool-card p{
+
+    color:var(--text-light);
+
+    margin-bottom:25px;
+
+}
+
+.tool-btn{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.tool-btn:hover{
+
+    background:var(--secondary);
+
+}
+
+/*======================================================
+    LIVE DEMONSTRATION
+======================================================*/
+
+.demo-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.demo-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.demo-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.demo-card i{
+
+    font-size:3rem;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+/*======================================================
+    PROMPT CARDS
+======================================================*/
+
+.prompt-card{
+
+    background:#12344D;
+
+    color:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.prompt-card h3{
+
+    margin-bottom:20px;
+
+    color:#fff;
+
+}
+
+.prompt-card pre{
+
+    background:#0f2737;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    overflow:auto;
+
+    white-space:pre-wrap;
+
+    font-family:Consolas,monospace;
+
+    line-height:1.7;
+
+}
+
+/*======================================================
+    QR RESOURCE HUB
+======================================================*/
+
+.qr-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+}
+
+.qr-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.qr-card:hover{
+
+    transform:scale(1.05);
+
+}
+
+.qr-card img{
+
+    width:120px;
+
+    margin:auto;
+
+}
+
+.qr-card h4{
+
+    margin-top:15px;
+
+    color:var(--navy);
+
+}
+
+/*======================================================
+    RESOURCE CENTRE
+======================================================*/
+
+.resource-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+
+    gap:30px;
+
+}
+
+.resource-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.resource-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.resource-card i{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+/*======================================================
+    WORKSHOP EXERCISE
+======================================================*/
+
+.exercise-box{
+
+    background:linear-gradient(135deg,#005EB8,#009B77);
+
+    color:#fff;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.exercise-box pre{
+
+    background:rgba(255,255,255,.12);
+
+    padding:25px;
+
+    border-radius:15px;
+
+    margin:25px 0;
+
+    white-space:pre-wrap;
+
+}
+
+/*======================================================
+    CERTIFICATE
+======================================================*/
+
+.certificate-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.certificate-card i{
+
+    font-size:4rem;
+
+    color:gold;
+
+    margin-bottom:20px;
+
+}
+
+/*======================================================
+    EVALUATION
+======================================================*/
+
+.evaluation-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.evaluation-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.evaluation-card img{
+
+    width:180px;
+
+    margin:25px auto;
+
+}
+
+/*======================================================
+    CONTACT
+======================================================*/
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.contact-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.contact-card i{
+
+    font-size:2.8rem;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+/*======================================================
+    THANK YOU SECTION
+======================================================*/
+
+.thank-you{
+
+    background:linear-gradient(135deg,#12344D,#005EB8,#009B77);
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.thank-you h1{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+}
+
+.thank-you h2{
+
+    margin:30px auto;
+
+    max-width:850px;
+
+    font-size:2rem;
+
+}
+
+.thank-you p{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    font-size:1.15rem;
+
+}
+
+/*======================================================
+    FOOTER
+======================================================*/
+
+footer{
+
+    background:#0d2233;
+
+    color:#fff;
+
+    padding:70px 0 30px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:40px;
+
+    margin-bottom:40px;
+
+}
+
+.footer-grid h3{
+
+    margin-bottom:20px;
+
+    color:#fff;
+
+}
+
+.footer-grid ul li{
+
+    margin-bottom:12px;
+
+    color:#d7e1ea;
+
+}
+
+footer hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    margin:30px 0;
+
+}
+
+footer p{
+
+    text-align:center;
+
+    color:#d7e1ea;
+
+}
+
+/*======================================================
+    FADE-IN ANIMATION
+======================================================*/
+
+.fade-in{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s ease;
+
+}
+
+.fade-in.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*======================================================
+    CUSTOM SCROLLBAR
+======================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef3f8;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--secondary);
+
+}
+
+/*==========================================
+    ACTIVE NAVIGATION
+==========================================*/
+
+nav a.active{
+
+    color:var(--secondary);
+
+    font-weight:700;
+
+    position:relative;
+
+}
+
+nav a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:100%;
+
+    height:3px;
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+}

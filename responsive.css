@@ -1,0 +1,462 @@
+/*======================================================
+    WACP 2026 KEYNOTE WEBSITE
+    responsive.css
+======================================================*/
+
+/*==============================
+    LARGE DESKTOPS
+==============================*/
+
+@media (max-width:1400px){
+
+    .container{
+
+        width:92%;
+
+    }
+
+}
+
+/*==============================
+    LAPTOPS
+==============================*/
+
+@media (max-width:1200px){
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .speaker-grid{
+
+        grid-template-columns:300px 1fr;
+
+        gap:40px;
+
+    }
+
+    .speaker-highlights{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/*==============================
+    TABLETS
+==============================*/
+
+@media (max-width:992px){
+
+    header{
+
+        position:relative;
+
+    }
+
+    nav{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px 0;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+
+        margin-top:20px;
+
+    }
+
+    .hero{
+
+        padding-top:60px;
+
+        text-align:center;
+
+    }
+
+    .hero-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-image{
+
+        order:-1;
+
+    }
+
+    .hero-image img{
+
+        max-width:420px;
+
+        margin:auto;
+
+    }
+
+    .speaker-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .speaker-photo img{
+
+        max-width:320px;
+
+        margin:auto;
+
+    }
+
+    .comparison-table{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .workflow{
+
+        flex-direction:column;
+
+    }
+
+    .arrow{
+
+        transform:rotate(90deg);
+
+    }
+
+}
+
+/*==============================
+    MOBILE
+==============================*/
+
+@media (max-width:768px){
+
+    body{
+
+        font-size:15px;
+
+    }
+
+    .section{
+
+        padding:70px 0;
+
+    }
+
+    .section-title{
+
+        font-size:2rem;
+
+    }
+
+    .section-subtitle{
+
+        font-size:1rem;
+
+    }
+
+    .hero h1{
+
+        font-size:2.3rem;
+
+    }
+
+    .hero h2{
+
+        font-size:1.25rem;
+
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+    }
+
+    .speaker-content h2{
+
+        font-size:2rem;
+
+    }
+
+    .speaker-highlights{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .objective-grid,
+    .cards-grid,
+    .threat-grid,
+    .ecosystem-grid,
+    .timeline,
+    .tools-grid,
+    .demo-grid,
+    .resource-grid,
+    .evaluation-grid,
+    .contact-grid,
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .workflow-step{
+
+        width:100%;
+
+    }
+
+    .tool-card img{
+
+        width:70px;
+
+        height:70px;
+
+    }
+
+    .prompt-card pre{
+
+        font-size:13px;
+
+    }
+
+    .exercise-box{
+
+        padding:35px;
+
+    }
+
+    .thank-you{
+
+        padding:80px 20px;
+
+    }
+
+    .thank-you h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .thank-you h2{
+
+        font-size:1.5rem;
+
+    }
+
+}
+
+/*==============================
+    SMALL PHONES
+==============================*/
+
+@media (max-width:576px){
+
+    .container{
+
+        width:94%;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+    }
+
+    .badge{
+
+        font-size:.85rem;
+
+        padding:8px 16px;
+
+    }
+
+    .hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .hero h2{
+
+        font-size:1.15rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .btn,
+    .btn-outline,
+    .tool-btn,
+    .btn-download{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+    .speaker-highlights{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .speaker-highlights div{
+
+        padding:20px;
+
+    }
+
+    .workflow-step{
+
+        padding:25px;
+
+    }
+
+    .comparison-column{
+
+        padding:25px;
+
+    }
+
+    .tool-card,
+    .demo-card,
+    .resource-card,
+    .contact-card,
+    .objective-card,
+    .info-card,
+    .threat-card,
+    .timeline-item{
+
+        padding:25px;
+
+    }
+
+    .qr-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .qr-card img{
+
+        width:90px;
+
+    }
+
+    .certificate-card{
+
+        padding:30px;
+
+    }
+
+    .evaluation-card img{
+
+        width:140px;
+
+    }
+
+}
+
+/*==============================
+    EXTRA SMALL DEVICES
+==============================*/
+
+@media (max-width:400px){
+
+    .logo{
+
+        font-size:1.2rem;
+
+    }
+
+    nav ul{
+
+        gap:12px;
+
+    }
+
+    nav ul li a{
+
+        font-size:.9rem;
+
+    }
+
+    .hero h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .hero h2{
+
+        font-size:1rem;
+
+    }
+
+    .section-title{
+
+        font-size:1.7rem;
+
+    }
+
+    .thank-you h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .thank-you h2{
+
+        font-size:1.3rem;
+
+    }
+
+    .qr-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
